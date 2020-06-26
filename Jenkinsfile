@@ -16,10 +16,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-	    	git 'https://github.com/BenjaminBoutrois/demoAssertionJunit.git'
-		withMaven(maven: 'Maven 3.6.3') {
-                	sh 'mvn package' 
-		}
+                sh 'mvn package' 
             }
             post {
                 success {
